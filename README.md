@@ -1,9 +1,27 @@
-# Neural Language Model — Assignment
+## Neural Language Model Training (PyTorch)
+This repository contains code and experiments for Assignment 2: Neural Language Model Training with PyTorch. The project demonstrates training and evaluation of a word-level LSTM-based language model on a provided dataset, including underfitting, overfitting, and best-fit scenarios.
 
-## Files
-- train_lm.py : Single-file PyTorch LM (Embedding + LSTM + Linear)
-- dataset.txt : Provided dataset (use only this file)
-- runs/ : Contains output per experiment (loss plot, results.json, best_model.pt)
+## Dataset
+Single text file: dataset.txt (only this dataset is used).
+
+## Implementation
+Framework: PyTorch, implemented from scratch (no pre-trained models, no high-level language model libraries).
+
+Architecture: Word-level LSTM language model (Embedding → LSTM → Linear).
+
+Loss: CrossEntropyLoss.
+
+Optimizer: Adam.
+
+Reproducibility: Fixed random seed (--seed 42).
+
+Checkpoints and Results saved in runs/<scenario>/ subfolders.
+
+## Requirements
+Python >= 3.8
+torch
+numpy
+matplotlib
 
 ## Quick commands
 Underfit:
